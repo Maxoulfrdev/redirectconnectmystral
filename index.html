@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion...</title>
+  <script>
+    function connect() {
+      window.location.href = "steam://connect/123.45.67.89:27015";
+      setTimeout(function() {
+        window.location.replace("steam://connect/123.45.67.89:27015");
+      }, 500);
+    }
+  </script>
+</head>
+<body onload="connect()">
+  <p>Connexion au serveur...</p>
+</body>
+</html>
