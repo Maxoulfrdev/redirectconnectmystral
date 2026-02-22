@@ -3,16 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Connexion...</title>
+
+  <!-- Anti cache -->
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <script>
     function connect() {
-      window.location.href = "steam://connect/arcturus.zkillu.fr:27041";
-      setTimeout(function() {
-        window.location.replace("steam://connect/arcturus.zkillu.fr:27041");
-      }, 500);
+      const url = "steam://connect/arcturus.zkillu.fr:27041";
+
+      // Méthode principale
+      window.location.href = url;
+
+      // Méthode de secours
+      setTimeout(() => {
+        window.location.replace(url);
+      }, 300);
     }
   </script>
 </head>
 <body onload="connect()">
-  <p>Connexion au serveur...</p>
 </body>
 </html>
